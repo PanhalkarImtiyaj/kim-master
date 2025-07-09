@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact page</title>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="../logo/kim.png" alt="Company Logo" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html" >Home</a></li>
+                <li><a href="../services/">Services</a></li>
+                <li><a href="../cars/">Cars</a></li>
+                <li><a href="../contact/" class="active">Contact</a></li>
+                <li class="auth-links">
+                    <a href="../login/" class="login-btn">Login</a>
+                    <a href="../sgin up/" class="signup-btn">Sign Up</a>
+                </li>
+            </ul>
+            <button class="hamburger">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+    </header>
+     <!-- Header -->
+     <header class="contact-header">
+        <h1>Contact KIM services Rentals</h1>
+        <p>We're here to help you with all your car rental needs</p>
+    </header>
+
+    <div class="container">
+        <!-- Founders Section -->
+        <section class="founders-section">
+            <h2>Meet Our Founders</h2>
+            <p>Get in touch directly with our leadership team</p>
+            
+            <div class="founders-grid">
+                <!-- Founder 1 -->
+                <div class="founder-card">
+                    <img src="https://randomuser.me/api/potraits/men/32.jpg" alt="Imtiyaj Panhalkar" class="founder-img">
+                    <h3 class="founder-name">Imtiyaj Panhalkar</h3>
+                    <p class="founder-title">CEO & Co-Founder</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class='bx bx-phone contact-icon'></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-envelope contact-icon'></i>
+                            <span>imtiyaj@driveindia.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-time contact-icon'></i>
+                            <!-- <span>Available: Mon-Fri, 9AM-6PM</span> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Founder 2 -->
+                <div class="founder-card">
+                    <img src="https://randomuser.me/api/portraits/omen/45.jpg" alt="Karuna Patil" class="founder-img">
+                    <h3 class="founder-name">Karuna Patil</h3>
+                    <p class="founder-title">Operations Director</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class='bx bx-phone contact-icon'></i>
+                            <span>+91 87654 32109</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-envelope contact-icon'></i>
+                            <span>karuna@driveindia.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-time contact-icon'></i>
+                            <!-- <span>Available: Mon-Sat, 10AM-7PM</span> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Founder 3 -->
+                <div class="founder-card">
+                    <img src="https://randomuser.me/api/portraits/women/65.jg" alt="Mubina Mulla" class="founder-img">
+                    <h3 class="founder-name">Mubina Mulla</h3>
+                    <p class="founder-title">Customer Relations Head</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class='bx bx-phone contact-icon'></i>
+                            <span>+91 76543 21098</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-envelope contact-icon'></i>
+                            <span>mubina@driveindia.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class='bx bx-time contact-icon'></i>
+                            <!-- <span>Available: Tue-Sun, 9AM-8PM</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" class="form-control" required>
+                        <option value="">Select a subject</option>
+                        <option value="booking">Booking Inquiry</option>
+                        <option value="support">Customer Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="partnership">Business Partnership</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Branches -->
+        <section class="branches-section">
+            <h2>Our Branches</h2>
+            <p>Visit us at these locations across India</p>
+            
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <h3 class="branch-name">Mumbai</h3>
+                    <p><i class='bx bx-map'></i> 123 Business Tower, Andheri East</p>
+                    <p><i class='bx bx-phone'></i> +91 22 6789 4321</p>
+                    <p><i class='bx bx-time'></i> Open Daily: 8AM-10PM</p>
+                </div>
+                <div class="branch-card">
+                    <h3 class="branch-name">Delhi</h3>
+                    <p><i class='bx bx-map'></i> 45 Connaught Place, Central Delhi</p>
+                    <p><i class='bx bx-phone'></i> +91 11 2345 6789</p>
+                    <p><i class='bx bx-time'></i> Open Daily: 8AM-10PM</p>
+                </div>
+                <div class="branch-card">
+                    <h3 class="branch-name">Bangalore</h3>
+                    <p><i class='bx bx-map'></i> 78 MG Road, Brigade Road Junction</p>
+                    <p><i class='bx bx-phone'></i> +91 80 4567 8901</p>
+                    <p><i class='bx bx-time'></i> Open Daily: 8AM-10PM</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

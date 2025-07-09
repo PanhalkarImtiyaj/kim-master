@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | KIM Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="/logo/kim.png" alt="kim Logo" class="hero-logo">
+            <h1 class="hero-title">Welcome Back to KIM services</h1>
+            <p class="hero-text">Login to access your account and book your next ride with India's most trusted car rental service.</p>
+            
+            <ul class="hero-features">
+                <li><i class='bx bx-check-circle'></i> Manage your bookings</li>
+                <li><i class='bx bx-check-circle'></i> View rental history</li>
+                <li><i class='bx bx-check-circle'></i> Get exclusive member deals</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <img src="/logo/kim.png" alt="kim-services" class="login-logo">
+            <h2 class="login-title">Login to Your Account</h2>
+            <p class="login-subtitle">Enter your details to continue</p>
+
+            <form>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="input-field" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" class="input-field" placeholder="Enter your password" required>
+                        <i class='bx bx-hide toggle-password'></i>
+                    </div>
+                </div>
+
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+              <a href="./index.html">  <button type="submit" class="login-btn">Login</button></a>
+
+                <div class="divider">or</div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn"><i class='bx bxl-google'></i></button>
+                    <button type="button" class="social-btn"><i class='bx bxl-facebook'></i></button>
+                    <button type="button" class="social-btn"><i class='bx bxl-twitter'></i></button>
+                </div>
+
+                <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

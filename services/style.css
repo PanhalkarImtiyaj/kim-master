@@ -1,0 +1,488 @@
+
+:root {
+    --primary-blue: #3498db;
+    --dark-blue: #2c3e50;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --saffron: #FF9933;
+    --india-green: #138808;
+    --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+:root {
+    --primary-blue: #3498db;
+    --dark-blue: #2c3e50;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--light-gray);
+    padding-top: 70px; /* Add padding to body to account for fixed navbar */
+  }
+  
+/* Navbar container - Fixed at top */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 1rem clamp(1rem, 5vw, 2rem);
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Rest of your existing navbar CSS remains the same */
+  
+  /* Logo styles with better hover */
+  .logo-img {
+    height: clamp(40px, 4vw, 45px);
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
+  /* Navigation links - Improved accessibility */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: clamp(1rem, 2vw, 1.8rem);
+    align-items: center;
+  }
+  
+  .nav-links li a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--primary-blue);
+    background-color: rgba(52, 152, 219, 0.1);
+  }
+  
+  /* .nav-links li a.active {
+    color: var(--primary-blue);
+    font-weight: 600;
+  } */
+  
+  /* Animated underline effect */
+  .nav-links li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background-color: var(--primary-blue);
+    animation: underline 0.3s ease-out;
+  }
+  
+  
+  @keyframes underline {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  
+  /* Auth buttons - Modern look */
+  .auth-links {
+    display: flex;
+    gap: 1rem;
+    margin-left: clamp(1rem, 2vw, 1.5rem);
+  }
+  
+  .login-btn, .signup-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  
+  .login-btn {
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+  }
+  
+  .signup-btn {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: 1px solid var(--primary-blue);
+  }
+  
+  .login-btn:hover {
+    background-color: var(--light-gray);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .signup-btn:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(41, 128, 185, 0.3);
+  }
+  
+  /* Mobile menu - Enhanced interactions */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--dark-blue);
+    font-size: 1.6rem;
+    transition: var(--transition);
+    padding: 0.5rem;
+  }
+  
+  .hamburger:hover {
+    color: var(--primary-blue);
+    transform: rotate(90deg);
+  }
+  
+  /* Responsive styles - Mobile-first approach */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.8rem 1.5rem;
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background-color: var(--white);
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      transition: left 0.4s ease-out;
+    }
+    
+    .nav-links.active {
+      left: 0;
+    }
+    
+    .auth-links {
+      margin-left: 0;
+      flex-direction: column;
+      width: 80%;
+      max-width: 300px;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+  
+    /* Mobile menu animation */
+    .nav-links li {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .nav-links.active li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Staggered animation */
+    .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
+  }
+.services-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 1rem;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.8s var(--ease-out-quint);
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.8s var(--ease-out-quint) 0.2s;
+}
+
+.animate-in .services-hero h1,
+.animate-in .services-hero p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.service-category {
+    margin-bottom: 4rem;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.category-title {
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.5s var(--ease-out-quint);
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.service-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 1.5rem;
+}
+
+.service-badge {
+    display: inline-block;
+    background-color: var(--saffron);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-title {
+    font-size: 1.4rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.8rem;
+}
+
+.service-description {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-features {
+    margin-bottom: 1.5rem;
+}
+
+.service-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-blue);
+    font-size: 0.9rem;
+}
+
+.service-feature i {
+    color: var(--primary-blue);
+}
+
+.service-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.service-price span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #64748b;
+}
+
+.book-btn {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.book-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Indian Special Services */
+.indian-special {
+    background-color: var(--light-gray);
+    padding: 4rem 1rem;
+    margin: 4rem 0;
+}
+
+.special-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.special-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.special-header h2 {
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.special-header p {
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.special-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.special-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+.special-card:hover {
+    transform: translateY(-5px) scale(1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.special-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+.special-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.special-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Animation Classes */
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 4rem 1rem;
+    }
+    
+    .services-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .category-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .category-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

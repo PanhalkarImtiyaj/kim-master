@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cars</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="/logo/kim.png" alt="Company Logo" class="logo-img">
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html" >Home</a></li>
+                <li><a href="../services/">Services</a></li>
+                <li><a href="../cars/"class="active">Cars</a></li>
+                <li><a href="../contact/">Contact</a></li>
+                <li class="auth-links">
+                    <a href="../login/" class="login-btn">Login</a>
+                    <a href="../sgin up/" class="signup-btn">Sign Up</a>
+                </li>
+            </ul>
+
+            <button class="hamburger">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+    </header>
+  <!-- Header -->
+  <header class="cars-header">
+    <h1>2000+ Cars Available Across India</h1>
+    <p>Choose from our extensive fleet of popular Indian models</p>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Filters -->
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All Cars</button>
+        <button class="filter-btn" data-filter="hatchback">Hatchbacks</button>
+        <button class="filter-btn" data-filter="sedan">Sedans</button>
+        <button class="filter-btn" data-filter="suv">SUVs</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+        <button class="filter-btn electric" data-filter="electric">Electric</button>
+        <button class="filter-btn" data-filter="7-seater">7-Seaters</button>
+    </div>
+
+    <!-- Cars Grid -->
+    <div class="cars-grid">
+        <!-- 1. Maruti Suzuki Swift -->
+        <div class="car-card" data-category="hatchback" data-availability="available">
+            <div class="availability-badge available">Available</div>
+            <div class="car-image-container">
+              
+            </div>
+            <div class="car-details">
+                <div class="car-make">MARUTI SUZUKI</div>
+                <h3 class="car-model">Swift</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Petrol</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 22 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Manual</div>
+                </div>
+                <div class="car-price">₹1,499 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 2. Hyundai Creta -->
+        <div class="car-card" data-category="suv" data-availability="available">
+            <div class="availability-badge available">Available</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/creta-exterior-right-front-three-quarter-3.jpeg" alt="Hyundai Creta" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">HYUNDAI</div>
+                <h3 class="car-model">Creta</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Diesel</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 17 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹3,499 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 3. Tata Nexon EV -->
+        <div class="car-card" data-category="electric" data-availability="limited">
+            <div class="availability-badge limited">Limited</div>
+            <div class="electric-badge">Electric Vehicle</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40445/nexon-ev-max-exterior-right-front-three-quarter-2.jpeg" alt="Tata Nexon EV" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">TATA</div>
+                <h3 class="car-model">Nexon EV</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-battery'></i> 312 km Range</div>
+                    <div class="car-spec"><i class='bx bx-time'></i> Fast Charging</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹3,999 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 4. Toyota Innova Crysta -->
+        <div class="car-card" data-category="7-seater" data-availability="available">
+            <div class="availability-badge available">Available</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40434/innova-crysta-exterior-right-front-three-quarter-3.jpeg" alt="Toyota Innova Crysta" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">TOYOTA</div>
+                <h3 class="car-model">Innova Crysta</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 7 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Diesel</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 13 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹4,499 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 5. Mahindra Thar -->
+        <div class="car-card" data-category="suv" data-availability="limited">
+            <div class="availability-badge limited">Limited</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40505/thar-exterior-right-front-three-quarter-2.jpeg" alt="Mahindra Thar" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">MAHINDRA</div>
+                <h3 class="car-model">Thar</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 4 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Diesel</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 15 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Manual</div>
+                </div>
+                <div class="car-price">₹4,999 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 6. Kia Seltos -->
+        <div class="car-card" data-category="suv" data-availability="sold-out">
+            <div class="availability-badge sold-out">Sold Out</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/42415/seltos-exterior-right-front-three-quarter-3.jpeg" alt="Kia Seltos" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">KIA</div>
+                <h3 class="car-model">Seltos</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Petrol</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 16 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹3,299 <span class="price-period">/day</span></div>
+                <button class="book-btn" disabled>Check Availability</button>
+            </div>
+        </div>
+
+        <!-- 7. Honda City -->
+        <div class="car-card" data-category="sedan" data-availability="available">
+            <div class="availability-badge available">Available</div>
+            <div class="car-image-container">
+                <img src="../images/sssk.webp" alt="Honda City" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">HONDA</div>
+                <h3 class="car-model">City</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Petrol</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 18 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹2,799 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 8. MG Hector -->
+        <div class="car-card" data-category="suv" data-availability="available">
+            <div class="availability-badge available">Available</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40438/hector-exterior-right-front-three-quarter-3.jpeg" alt="MG Hector" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">MG</div>
+                <h3 class="car-model">Hector</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Petrol</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 14 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹3,899 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 9. Tata Harrier -->
+        <div class="car-card" data-category="suv" data-availability="available">
+            <div class="availability-badge available">Available</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40443/harrier-exterior-right-front-three-quarter-3.jpeg" alt="Tata Harrier" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">TATA</div>
+                <h3 class="car-model">Harrier</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Diesel</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 16 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹4,199 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- 10. Hyundai Verna -->
+        <div class="car-card" data-category="sedan" data-availability="available">
+            <div class="availability-badge available">Available</div>
+            <div class="car-image-container">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/54351/verna-exterior-right-front-three-quarter-3.jpeg" alt="Hyundai Verna" class="car-image">
+            </div>
+            <div class="car-details">
+                <div class="car-make">HYUNDAI</div>
+                <h3 class="car-model">Verna</h3>
+                <div class="car-specs">
+                    <div class="car-spec"><i class='bx bx-group'></i> 5 Seats</div>
+                    <div class="car-spec"><i class='bx bx-gas-pump'></i> Petrol</div>
+                    <div class="car-spec"><i class='bx bx-tachometer'></i> 17 kmpl</div>
+                    <div class="car-spec"><i class='bx bx-cog'></i> Automatic</div>
+                </div>
+                <div class="car-price">₹2,999 <span class="price-period">/day</span></div>
+                <button class="book-btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- [Additional 30 cars can be added following the same pattern] -->
+    </div>
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>
